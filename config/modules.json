@@ -53,37 +53,6 @@
       ]
     },
     {
-      "name": "quic",
-      "artifact": "quic.ko",
-      "description": "QUIC: A UDP-Based Multiplexed and Secure Transport (RFC 9000) – from lxin/quic",
-      "requires_patch": true,
-      "configs": [
-        {
-          "symbol": "CONFIG_IP_QUIC",
-          "value": "m"
-        }
-      ]
-    },
-    {
-      "name": "zfs",
-      "artifact": "zfs.ko",
-      "description": "ZFS filesystem support – from openzfs/zfs",
-      "requires_patch": true,
-      "exclude_boards": [
-        "rpi3_64",
-        "rpi4_64",
-        "rpi5_64",
-        "yellow"
-      ],
-      "exclude_reason": "ZFS (CDDL) is license-incompatible with GPL-only kernel symbols exposed by Raspberry Pi kernels (kernel_neon_begin/end, bpf_trace_run*, trace_event_*).",
-      "configs": [
-        {
-          "symbol": "CONFIG_ZFS",
-          "value": "m"
-        }
-      ]
-    },
-    {
       "name": "dell-smbios",
       "artifact": "dell-smbios.ko",
       "description": "Dell SMBIOS WMI backend",
