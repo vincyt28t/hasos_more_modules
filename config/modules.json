@@ -82,6 +82,25 @@
           "value": "m"
         }
       ]
+    },
+    {
+      "name": "dell-smbios",
+      "artifact": "dell-smbios.ko",
+      "description": "Dell SMBIOS WMI backend",
+      "configs": [
+        {
+          "symbol": "CONFIG_X86_PLATFORM_DRIVERS_DELL",
+          "value": "y"
+        },
+        {
+          "symbol": "CONFIG_DELL_SMBIOS",
+          "value": "m"
+        },
+        {
+          "symbol": "CONFIG_DELL_SMBIOS_WMI",
+          "value": "y"
+        }
+      ]
     }
   ]
 }
